@@ -1,68 +1,68 @@
 {
-  "name": "CatUserbot",
+  "name": "RICKTHON",
   "description": "A simple Telegram userbot based on Telethon . Maintained by Sandeep ",
-  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
+  "logo": "https://graph.org/file/59d170392c2ecd92e932b.jpg",
   "keywords": [
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/TgCatUB/catuserbot",
+  "repository": "https://github.com/rick1128/userbot",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "give your name",
+      "description": "اسم حسابك بالتلي",
       "value": ""
     },
     "APP_ID": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "ايبي ايدي",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "ايبي هاش",
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "Get this value by running python3 stringsetup.py locally or https://generatestringsession.sandeep1709.repl.run",
+      "description": "كود تيرمكس",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.",
+      "description": "توكن بوتك.",
       "value": ""
     },
     "COMMAND_HAND_LER": {
-      "description": "Set this one with only one the symbol to use it before your command to run like . , ' `",
+      "description": "لاتغيره نهائيا . , ' `",
       "value": ".",
       "required": false
     },
     "ENV": {
-      "description": "Setting this to ANYTHING will enable heroku.",
+      "description": "لاتغيره نهائيا.",
       "value": "ANYTHING",
       "required": false
     },
     "HEROKU_API_KEY": {
-      "description": "Required for updating the bot and other stuff get it from https://dashboard.heroku.com/account",
+      "description": "ايبي كي هيروكو تحصل عليه من هذا الرابط https://dashboard.heroku.com/account",
       "value": "",
       "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "YOUR app name ",
+      "description": "اسم التطبيق الذي ادخلته اول خانه ",
       "value": "",
       "required": false
     },
     "TZ": {
-      "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "Asia/Kolkata",
+      "description": "لاتغيرة",
+      "value": "Asia/Baghdad",
       "required": false
     },
     "EXTERNAL_REPO": {
-      "description": "To install external plugins. if you don't want, change value to 'False'",
+      "description": "لاتغيره نهائيا",
       "value": "True",
       "required": false
     },
     "BADCAT": {
-      "description": "set 'True' to install 18+ plugins.",
+      "description": "لاتغيره نهائيا",
       "value": "False",
       "required": false
     }
