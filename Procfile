@@ -1,1 +1,1 @@
-worker: bash rickthon
+worker: bash startup
