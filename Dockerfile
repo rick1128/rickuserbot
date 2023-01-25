@@ -14,4 +14,4 @@ RUN bash installer.sh
 WORKDIR "/root/userbot"
 
 # start the bot.
-CMD ["bash", "startup"]
+CMD ["bash", "rickthon"]
