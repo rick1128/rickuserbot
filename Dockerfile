@@ -1,16 +1,17 @@
-FROM rick1128/userbot:slim-buster
+# ها وردة جاي تخمـط الملف كتابة - @ZQ_LO - @S_Z_H
 
-#clonning repo 
-RUN git clone https://github.com/rick1128/userbot.git /root/userbot 
-#working directory 
-WORKDIR /root/userbot
+FROM theteamultroid/ultroid:main
 
-# Install requirements
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
-RUN pip3 install --no-cache-dir -r requirements.txt
+# set timezone
+ENV TZ=Asia/Baghdad
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-ENV PATH="/home/userbot/bin:$PATH"
+COPY installer.sh .
 
-CMD ["python3","-m","userbot"]
+RUN bash installer.sh
+
+# changing workdir
+WORKDIR "/root/TeamUltroid"
+
+# start the bot.
+CMD ["bash", "startup"]
