@@ -1,6 +1,6 @@
 # ها وردة جاي تخمـط الملف كتابة - @ZQ_LO - @S_Z_H
 
-FROM theteamultroid/ultroid:main
+FROM rick1128/userbot:master
 
 # set timezone
 ENV TZ=Asia/Baghdad
@@ -11,7 +11,7 @@ COPY installer.sh .
 RUN bash installer.sh
 
 # changing workdir
-WORKDIR "/root/TeamUltroid"
+WORKDIR "/root/userbot"
 
 # start the bot.
 CMD ["bash", "startup"]
