@@ -1,17 +1,15 @@
-# ها وردة جاي تخمـط الملف كتابة - @ZQ_LO - @S_Z_H
+FROM debian:11
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get -y install \
+    python3 python3-dev python3-dev python3-pip python3-venv 
 
-FROM rick1128/userbot:master
-
-# set timezone
-ENV TZ=Asia/Baghdad
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-COPY installer.sh .
-
-RUN bash installer.sh
-
-# changing workdir
-WORKDIR "/root/userbot"
-
-# start the bot.
-CMD ["bash", "rickthon"]
+RUN apt-get install git curl python3-pip ffmpeg -y
+ARG USER=root
+USER $USER
+RUN python3 -m venv venv
+WORKDIR /app
+COPY . .
+RUN pip3 install -r requirements.txt
+EXPOSE 5000
+RUN chmod +x /app/start.sh
+ENTRYPOINT ["./start.sh"]
